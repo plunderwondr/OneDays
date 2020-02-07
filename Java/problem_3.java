@@ -11,39 +11,40 @@ public class problem_3 {
 	*/
 	public static void main(String[] args)
 	{
-		  long END_NUMBER = 13195;
-//		  long END_NUMBER = 600851475143L;
-		  Vector<Integer> factors_of_numbers = new Vector<Integer>();
-		  Vector<Integer> prime_numbers = new Vector<Integer>();
+//		  long END_NUMBER = 13195;
+		  long END_NUMBER = 600851475143L;
+		  Vector factors_of_numbers = new Vector();
+		  Vector prime_numbers = new Vector();
 		  
 		  //Finding all factors of Number Goal
-		  for(int i = 2; i < (END_NUMBER/2);i++)
+		  for(long i = 2l; i < (END_NUMBER/2);i++)
 		  {
 			  if ((END_NUMBER % i) == 0)
 			  {
 				  factors_of_numbers.add(i);
+				  System.out.println("Running" + i);
 			  }
 		  } //for i
-		  
+		  System.out.println("success");
 		  //Determining primes from list of factors
-		  Vector<Integer> temp_copy_factors_of_numbers = factors_of_numbers;
-		  for(int i = 0; i < factors_of_numbers.size(); i++)
-		  {
-			  
-			  for(int j = factors_of_numbers.size(); j > 0; j--)
-			  {
-				  
-				  if ( factors_of_numbers.elementAt(i) % factors_of_numbers.elementAt(j-1) == 0
-						  && (factors_of_numbers.elementAt(i) != factors_of_numbers.elementAt(j-1))
-				     )
-				  {
-//					  System.out.println( factors_of_numbers.elementAt(i)+ " != " + factors_of_numbers.elementAt(j-1)  );
-//					  System.out.println(temp_copy_factors_of_numbers.elementAt(i));
-					  temp_copy_factors_of_numbers.set(i,-1);
-				  }
-				  
-			  }
-		  }
+		  Vector temp_copy_factors_of_numbers = factors_of_numbers;
+//		  for(int i = 0; i < factors_of_numbers.size(); i++)
+//		  {
+//			  
+//			  for(int j = factors_of_numbers.size(); j > 0; j--)
+//			  {
+//				  
+//				  if ( factors_of_numbers.elementAt(i) % factors_of_numbers.elementAt(j-1) == 0
+//						  && (factors_of_numbers.elementAt(i) != factors_of_numbers.elementAt(j-1))
+//				     )
+//				  {
+////					  System.out.println( factors_of_numbers.elementAt(i)+ " != " + factors_of_numbers.elementAt(j-1)  );
+////					  System.out.println(temp_copy_factors_of_numbers.elementAt(i));
+//					  temp_copy_factors_of_numbers.set(i,-1);
+//				  }
+//				  
+//			  }
+//		  }
 
 		//  temp_copy_factors_of_numbers.remove(1); // this works fine .
 		//	System.out.println(temp_copy_factors_of_numbers.elementAt(1));
