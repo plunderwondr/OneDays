@@ -17,6 +17,11 @@ First Idea:
     V2 - loop through all combinations count if mod 0
 Proven math:
     (N) = (n-1) + (n-2)     N is equal to the result of n -1 and result of n-2 therefore recursive solution
+*/
+
+/*
+Q2:
+    Assuming this question is a more complicated version of a recursive n-1,n-2 . skipping to attempting to prove on whiteboard.
 
 
 */
