@@ -22,6 +22,6 @@ Proven math:
 /*
 Q2:
     Assuming this question is a more complicated version of a recursive n-1,n-2 . skipping to attempting to prove on whiteboard.
-
+ss
 
 */
