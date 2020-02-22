@@ -39,27 +39,34 @@ public class walking_stairs {
 		return numOfWays(n-1) + numOfWays(n-2);
 	}
 	
-	static int numOfWays(int n,int [] stepOptions) {
-		int result = 0;
-		if (n == 1 || n == 0)
+
+	static int numOfWays(int n, int [] stepOptions)
+	{
+		if( n == 0)
 		{
-			return  1;
+			return 1 ;
+		}
+		int total = 0;
+		
+		for(int i = 0; i<stepOptions.length;i++) 
+		{
+			if(n - i >= 0)
+			{
+				int stepiValue = stepOptions[i];
+				total += numOfWays(n - stepiValue,stepOptions);
+			}
 		}
 		
 		
-		for( int i = 0; i < stepOptions.length; i++)
-		{
-			int temp = stepOptions[i];
-			result += numOfWays((temp -1),stepOptions);
-		}
-		return result;
+		return total;
+		
 	}
 	
 	
 	public static void main(String[] args)
 	{
-		int stairCount = 7;
-		int [] array = {1,3,5};
+		int stairCount = 5;
+		int [] array = {1,2,3,4};
 		int output = numOfWays(stairCount,array);
 		
 		System.out.println("Welcome");
