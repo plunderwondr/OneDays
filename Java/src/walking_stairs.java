@@ -1,4 +1,6 @@
+package src;
 /*
+
 Question 1:
  Write function numOfWays(n) Where n is number of steps. 
 User may either take 1 or 2 steps to reach the top.

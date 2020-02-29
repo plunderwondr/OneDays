@@ -1,9 +1,10 @@
-/*In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
+package src;
+/*In the 20Ã—20 grid below, four numbers along a diagonal line have been marked in red.
 
 <removed grid for space >
-The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
+The product of these numbers is 26 Ã— 63 Ã— 78 Ã— 14 = 1788696.
 
-What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20Ã—20 grid?
 COMPLETE
 */
 
@@ -35,7 +36,7 @@ public class problem_11 {
 		
 		int NUMBER_OF_MULTIPLES = 4; // number of elements to the product w*x*y*z
 		
-		// 4 different vector directions // ↘↖ // ↗↙ // ↓↑  // ←→
+		// 4 different vector directions // â†˜â†– // â†—â†™ // â†“â†‘  // â†�â†’
 		
 		int tempProduct = 1 ;	
 		int greatestProduct = 0;
@@ -74,7 +75,7 @@ public class problem_11 {
 
 					}
 				}
-				// backslash Diagonal ↘↖
+				// backslash Diagonal â†˜â†–
 				if (i + NUMBER_OF_MULTIPLES < matrix.length && j + NUMBER_OF_MULTIPLES < matrix[i].length)
 				{
 					tempProduct = 1; // Reset tempProduct
